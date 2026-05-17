@@ -1,0 +1,17 @@
+CREATE TABLE weatherDB (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    temp REAL
+);
+
+insertWeatherDb:
+INSERT OR REPLACE INTO weatherDB VALUES ?;
+
+getAll:
+SELECT * FROM weatherDB;
+
+getWeatherByTemp:
+SELECT * FROM weatherDB WHERE temp > ?;
+
+clear:
+DELETE FROM weatherDB;

@@ -1,0 +1,19 @@
+CREATE TABLE bookDB (
+     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     name TEXT NOT NULL,
+     number INTEGER NOT NULL,
+     test INTEGER NOT NULL
+);
+
+getAll:
+SELECT * FROM bookDB;
+
+insert:
+INSERT OR REPLACE INTO bookDB VALUES ?;
+
+getBookByNumber:
+SELECT * FROM bookDB WHERE number > ?;
+
+clear:
+DELETE FROM bookDB;
+

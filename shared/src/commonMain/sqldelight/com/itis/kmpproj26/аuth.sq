@@ -1,0 +1,38 @@
+import kotlin.Int;
+
+CREATE TABLE Users (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    token TEXT NOT NULL UNIQUE,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    created_at INTEGER NOT NULL
+);
+
+getUserByEmail:
+SELECT * FROM Users
+WHERE email = ?;
+
+getUserByToken:
+SELECT * FROM Users
+WHERE token = ?;
+
+getUserByEmailAndPassword:
+SELECT * FROM Users
+WHERE email = ? AND password = ?;
+
+insertUser:
+INSERT INTO Users(
+    email,
+    password,
+    token,
+    first_name,
+    last_name,
+    created_at
+)
+VALUES (?, ?, ?, ?, ?, ?);
+
+deleteByToken:
+DELETE FROM Users
+WHERE token = ?;
