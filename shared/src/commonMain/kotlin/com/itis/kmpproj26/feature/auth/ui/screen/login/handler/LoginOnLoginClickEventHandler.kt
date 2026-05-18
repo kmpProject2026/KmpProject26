@@ -44,17 +44,16 @@ class LoginOnLoginClickEventHandler(
     }
 
     private fun LoginViewModel.onFailure(failureReason: FailureReason) {
-        val message: String
-        when (failureReason) {
+        viewState = when (failureReason) {
             is FailureReason.BadRequest -> {
-                viewState = viewState.copy(
+                viewState.copy(
                     isLoading = false,
                     loginError = LoginError.INVALID,
                 )
             }
 
             else -> {
-                viewState = viewState.copy(
+                viewState.copy(
                     isLoading = false,
                     showErrorDialog = true,
                 )
