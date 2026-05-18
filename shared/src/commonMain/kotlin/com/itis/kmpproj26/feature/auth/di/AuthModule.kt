@@ -15,6 +15,12 @@ import com.itis.kmpproj26.feature.auth.domain.usecase.IsUserLoggedInUseCase
 import com.itis.kmpproj26.feature.auth.domain.usecase.LoginUseCase
 import com.itis.kmpproj26.feature.auth.domain.usecase.LogoutUseCase
 import com.itis.kmpproj26.feature.auth.domain.usecase.RegisterUseCase
+import com.itis.kmpproj26.feature.auth.ui.screen.login.handler.LoginEmailChangedEventHandler
+import com.itis.kmpproj26.feature.auth.ui.screen.login.handler.LoginHideErrorDialogEventHandler
+import com.itis.kmpproj26.feature.auth.ui.screen.login.handler.LoginInitEventHandler
+import com.itis.kmpproj26.feature.auth.ui.screen.login.handler.LoginOnLoginClickEventHandler
+import com.itis.kmpproj26.feature.auth.ui.screen.login.handler.LoginOnRegisterClickIntentHandler
+import com.itis.kmpproj26.feature.auth.ui.screen.login.handler.LoginPasswordChangedIntentHandler
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationEmailChangedEventHandler
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationFirstNameChangedEventHandler
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationHideErrorDialogEventHandler
@@ -39,6 +45,13 @@ val authModule = module {
     factory<RegisterUseCase> { RegisterUseCaseImpl(get()) }
 
     factoryOf(::SplashInitEventHandler)
+
+    factoryOf(::LoginEmailChangedEventHandler)
+    factoryOf(::LoginHideErrorDialogEventHandler)
+    factoryOf(::LoginInitEventHandler)
+    factoryOf(::LoginOnLoginClickEventHandler)
+    factoryOf(::LoginOnRegisterClickIntentHandler)
+    factoryOf(::LoginPasswordChangedIntentHandler)
 
     factoryOf(::RegistrationEmailChangedEventHandler)
     factoryOf(::RegistrationFirstNameChangedEventHandler)

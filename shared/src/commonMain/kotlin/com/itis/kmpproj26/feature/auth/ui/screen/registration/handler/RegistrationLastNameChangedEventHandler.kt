@@ -7,9 +7,9 @@ import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewMo
 class RegistrationLastNameChangedEventHandler :
     BaseEventHandler<RegistrationEvent.OnLastNameChanged, RegistrationViewModel>() {
 
-    override fun RegistrationViewModel.obtain(intent: RegistrationEvent.OnLastNameChanged) {
+    override fun RegistrationViewModel.obtain(event: RegistrationEvent.OnLastNameChanged) {
        viewState = viewState.copy(
-           lastName = intent.lastName,
+           lastName = event.lastName,
            lastNameError = null,
            registrationError = null
        )

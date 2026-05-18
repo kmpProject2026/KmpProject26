@@ -7,7 +7,7 @@ import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewMo
 class RegistrationInitEventHandler :
     BaseEventHandler<RegistrationEvent.Init, RegistrationViewModel>() {
 
-    override fun RegistrationViewModel.obtain(intent: RegistrationEvent.Init) {
+    override fun RegistrationViewModel.obtain(event: RegistrationEvent.Init) {
         // analyticsService.registrationOpen()
     }
 }

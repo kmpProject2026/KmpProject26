@@ -8,7 +8,7 @@ import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewMo
 class RegistrationOnLoginClickEventHandler :
     BaseEventHandler<RegistrationEvent.OnLoginClick, RegistrationViewModel>() {
 
-    override fun RegistrationViewModel.obtain(intent: RegistrationEvent.OnLoginClick) {
+    override fun RegistrationViewModel.obtain(event: RegistrationEvent.OnLoginClick) {
         viewAction = RegistrationAction.NavigateToLogin
     }
 }

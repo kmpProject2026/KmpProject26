@@ -13,7 +13,7 @@ class SplashInitEventHandler(
     private val isUserLoggedInUseCase: IsUserLoggedInUseCase,
 ) : BaseEventHandler<SplashEvent.Init, SplashViewModel>() {
 
-    override fun SplashViewModel.obtain(intent: SplashEvent.Init) {
+    override fun SplashViewModel.obtain(event: SplashEvent.Init) {
         viewModelScope.launch {
             viewState = viewState.copy(isLoading = true)
 

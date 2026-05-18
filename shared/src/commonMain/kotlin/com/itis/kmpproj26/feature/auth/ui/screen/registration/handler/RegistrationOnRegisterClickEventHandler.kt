@@ -11,7 +11,6 @@ import com.itis.kmpproj26.feature.auth.ui.validator.PasswordValidator
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationAction
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationError
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationEvent
-import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationState
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewModel
 import kotlinx.coroutines.launch
 
@@ -19,7 +18,7 @@ class RegistrationOnRegisterClickEventHandler (
     private val registerUseCase: RegisterUseCase,
 ) : BaseEventHandler<RegistrationEvent.OnRegisterClick, RegistrationViewModel>() {
 
-    override fun RegistrationViewModel.obtain(intent: RegistrationEvent.OnRegisterClick) {
+    override fun RegistrationViewModel.obtain(event: RegistrationEvent.OnRegisterClick) {
         if (!validateInput()) return
 
         viewModelScope.launch {

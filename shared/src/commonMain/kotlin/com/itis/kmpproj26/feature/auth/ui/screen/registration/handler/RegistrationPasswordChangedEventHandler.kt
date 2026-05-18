@@ -7,9 +7,9 @@ import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewMo
 class RegistrationPasswordChangedEventHandler:
     BaseEventHandler<RegistrationEvent.OnPasswordChanged, RegistrationViewModel>() {
 
-    override fun RegistrationViewModel.obtain(intent: RegistrationEvent.OnPasswordChanged) {
+    override fun RegistrationViewModel.obtain(event: RegistrationEvent.OnPasswordChanged) {
         viewState = viewState.copy(
-            password = intent.password.trim(),
+            password = event.password.trim(),
             passwordError = null,
             registrationError = null
         )

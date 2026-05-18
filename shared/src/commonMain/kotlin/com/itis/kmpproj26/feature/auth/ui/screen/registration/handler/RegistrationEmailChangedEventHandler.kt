@@ -7,9 +7,9 @@ import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewMo
 class RegistrationEmailChangedEventHandler () :
     BaseEventHandler<RegistrationEvent.OnEmailChanged, RegistrationViewModel>() {
 
-    override fun RegistrationViewModel.obtain(intent: RegistrationEvent.OnEmailChanged) {
+    override fun RegistrationViewModel.obtain(event: RegistrationEvent.OnEmailChanged) {
         viewState = viewState.copy(
-            email = intent.email.trim(),
+            email = event.email.trim(),
             emailError = null,
             registrationError = null
         )
