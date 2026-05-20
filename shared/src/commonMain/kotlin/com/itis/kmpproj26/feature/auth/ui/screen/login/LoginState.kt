@@ -10,9 +10,13 @@ data class LoginState(
     val emailError: EmailError? = null,
     val passwordError: PasswordError? = null,
     val loginError: LoginError? = null,
-    val showErrorDialog: Boolean = false,
+    val errorDialog: LoginErrorDialog? = null,
 )
 
 enum class LoginError {
     INVALID,
+}
+
+enum class LoginErrorDialog {
+    UNKNOWN
 }

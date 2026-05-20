@@ -41,12 +41,13 @@ fun LoginScreen(
         onRegisterClick = { viewModel.obtainEvent(LoginEvent.OnRegisterClick) },
     )
 
-    if (state.showErrorDialog) {
-        DDialog(
+    when (state.errorDialog) {
+        LoginErrorDialog.UNKNOWN -> DDialog(
             message = stringResource(Res.string.common_failure_unknown),
             onDismiss = {
                 viewModel.obtainEvent(LoginEvent.HideErrorDialog)
             }
         )
+        null -> Unit
     }
 }

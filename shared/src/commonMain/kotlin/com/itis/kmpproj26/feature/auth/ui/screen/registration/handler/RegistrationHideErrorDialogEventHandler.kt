@@ -8,6 +8,6 @@ class RegistrationHideErrorDialogEventHandler :
     BaseEventHandler<RegistrationEvent.HideErrorDialog, RegistrationViewModel>() {
 
     override fun RegistrationViewModel.obtain(event: RegistrationEvent.HideErrorDialog) {
-        viewState = viewState.copy(showErrorDialog = false)
+        viewState = viewState.copy(errorDialog = null)
     }
 }
