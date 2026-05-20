@@ -30,14 +30,14 @@ class RegistrationViewModel : BaseViewModel<State, Action, Event>(
 
     override fun obtainEvent(event: Event) {
         when (event) {
-            is Event.HideErrorDialog -> with(hideErrorDialogEventHandler) { obtainEvent(event) }
-            is Event.Init -> with(initEventHandler) { obtainEvent(event) }
-            is Event.OnEmailChanged -> with(onEmailChangedEventHandler) { obtainEvent(event) }
-            is Event.OnFirstNameChanged -> with(onFirstNameChangedEventHandler) { obtainEvent(event) }
-            is Event.OnLastNameChanged -> with(onLastNameChangedEventHandler) { obtainEvent(event) }
-            is Event.OnLoginClick -> with(onLoginClickEventHandler) { obtainEvent(event) }
-            is Event.OnPasswordChanged -> with(onPasswordChangedEventHandler) { obtainEvent(event) }
-            is Event.OnRegisterClick -> with(onRegisterClickEventHandler) { obtainEvent(event) }
+            is Event.HideErrorDialog -> with(hideErrorDialogEventHandler) { obtain(event) }
+            is Event.Init -> with(initEventHandler) { obtain(event) }
+            is Event.OnEmailChanged -> with(onEmailChangedEventHandler) { obtain(event) }
+            is Event.OnFirstNameChanged -> with(onFirstNameChangedEventHandler) { obtain(event) }
+            is Event.OnLastNameChanged -> with(onLastNameChangedEventHandler) { obtain(event) }
+            is Event.OnLoginClick -> with(onLoginClickEventHandler) { obtain(event) }
+            is Event.OnPasswordChanged -> with(onPasswordChangedEventHandler) { obtain(event) }
+            is Event.OnRegisterClick -> with(onRegisterClickEventHandler) { obtain(event) }
         }
     }
 }

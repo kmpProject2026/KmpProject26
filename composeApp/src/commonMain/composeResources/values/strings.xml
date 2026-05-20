@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+
+    <!--    NAVIGATION-->
+    <string name="navigation_favourites_tab_title">Favourites</string>
+    <string name="navigation_profile_tab_title">Profile</string>
+
+    <!--    COMMON-->
+    <string name="common_edit">Edit</string>
+    <string name="common_more">More</string>
+    <string name="common_add">Add</string>
+    <string name="common_repeat">Repeat</string>
+    <string name="common_error">An error occurred</string>
+    <string name="common_search">Search</string>
+    <string name="common_start">Start</string>
+    <string name="common_end">End</string>
+    <string name="common_back">Back</string>
+    <string name="common_exit">Close</string>
+    <string name="common_ok">OK</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="common_done">Save</string>
+    <string name="common_close">Cancel</string>
+    <string name="common_all">All</string>
+    <string name="common_warning">Warning</string>
+
+    <string name="common_failure_network">Network error. Check your connection</string>
+    <string name="common_failure_bad_request">Invalid request</string>
+    <string name="common_failure_unauthorized">Authorization required</string>
+    <string name="common_failure_forbidden">Access denied</string>
+    <string name="common_failure_not_found">Data not found</string>
+    <string name="common_failure_server">Server error. Please try again later</string>
+    <string name="common_failure_unknown">An unknown error occurred</string>
+
+    <!--    AUTH-->
+    <string name="auth_error_empty_first_name">First name should not be empty</string>
+    <string name="auth_error_empty_last_name">Last name should not be empty</string>
+    <string name="auth_error_empty_email">Email should not be empty</string>
+    <string name="auth_error_invalid_email">Invalid email format</string>
+    <string name="auth_error_used_email">Email already in use</string>
+    <string name="auth_error_empty_password">Password should not be empty</string>
+    <string name="auth_error_short_password">Password should contain not less than 6 symbols</string>
+    <string name="auth_error_invalid_data">Invalid email or password</string>
+    <string name="auth_first_name">First name</string>
+    <string name="auth_last_name">Last name</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_enter_first_name_label">Enter first name</string>
+    <string name="auth_enter_last_name_label">Enter last name</string>
+    <string name="auth_enter_email_label">Enter email</string>
+    <string name="auth_enter_password_label">Enter password</string>
+    <string name="auth_login">Login</string>
+    <string name="auth_register">Register</string>\
+
+</resources>

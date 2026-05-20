@@ -16,7 +16,7 @@ class SplashViewModel : BaseViewModel<State, Action, Event>(
 
     override fun obtainEvent(event: Event) {
         when (event) {
-            is Event.Init -> with(initEventHandler) { obtainEvent(event) }
+            is Event.Init -> with(initEventHandler) { obtain(event) }
         }
     }
 }

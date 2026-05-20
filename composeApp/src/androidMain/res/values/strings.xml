@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Kmpproj26native</string>
+
+    <!--    NAVIGATION-->
+    <string name="navigation_poses_tab_title">Poses</string>
+    <string name="navigation_favourites_tab_title">Favourites</string>
+    <string name="navigation_training_tab_title">Training</string>
+    <string name="navigation_profile_tab_title">Profile</string>
+
+
 </resources>

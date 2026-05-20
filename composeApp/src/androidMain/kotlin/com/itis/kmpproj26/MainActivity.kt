@@ -4,28 +4,28 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.itis.kmpproj26.feature.old.DatabaseBookDataSource
+import com.itis.kmpproj26.common.navigation.NavEntryBuilder
+import com.itis.kmpproj26.common.navigation.NavHost
+import com.itis.kmpproj26.common.ui.theme.DTheme
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
 
-    private val dbSource: DatabaseBookDataSource by inject()
+    private val entryBuilders: Set<NavEntryBuilder> by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
-
-//        lifecycleScope.launch {
-//            dbSource.addBook()
-//            val list = dbSource.getAll()
-//            print(list.getOrNull(0))
-//        }
-
-
+        enableEdgeToEdge()
         setContent {
-            App()
+            DTheme(darkTheme = isSystemInDarkTheme()) {
+                NavHost(
+                    entryBuilders = entryBuilders,
+                )
+            }
         }
     }
 }

@@ -28,6 +28,7 @@ import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.Registrati
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationLastNameChangedEventHandler
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationOnLoginClickEventHandler
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationOnRegisterClickEventHandler
+import com.itis.kmpproj26.feature.auth.ui.screen.registration.handler.RegistrationPasswordChangedEventHandler
 import com.itis.kmpproj26.feature.auth.ui.screen.splash.handler.SplashInitEventHandler
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
@@ -60,5 +61,5 @@ val authModule = module {
     factoryOf(::RegistrationLastNameChangedEventHandler)
     factoryOf(::RegistrationOnLoginClickEventHandler)
     factoryOf(::RegistrationOnRegisterClickEventHandler)
-    factoryOf(::RegistrationEmailChangedEventHandler)
+    factoryOf(::RegistrationPasswordChangedEventHandler)
 }

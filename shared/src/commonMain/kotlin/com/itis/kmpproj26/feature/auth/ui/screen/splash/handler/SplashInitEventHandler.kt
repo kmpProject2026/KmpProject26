@@ -19,9 +19,7 @@ class SplashInitEventHandler(
 
             val result = isUserLoggedInUseCase()
             val action = when {
-                result is Result.Success && result.data ->
-                    SplashAction.NavigateToCategories
-
+                result is Result.Success && result.data -> SplashAction.NavigateToProfile
                 else -> SplashAction.NavigateToLogin
             }
 
