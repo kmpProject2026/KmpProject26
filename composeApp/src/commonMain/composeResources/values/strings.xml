@@ -57,7 +57,7 @@
     <string name="profile_first_name">First name</string>
     <string name="profile_last_name">Last name</string>
     <string name="profile_email">Email</string>
-    <string name="profile_created">You are together with us from %s ❤️</string>
+    <string name="profile_created">You are together with us from %1$s ❤️</string>
     <string name="profile_delete_profile">Delete profile</string>
     <string name="profile_deleted">Profile successfully deleted</string>
     <string name="profile_delete_profile_warning">Are you sure to delete profile?</string>
