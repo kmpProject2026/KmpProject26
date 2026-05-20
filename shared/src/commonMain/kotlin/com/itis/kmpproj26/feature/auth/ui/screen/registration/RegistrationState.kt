@@ -1,6 +1,5 @@
 package com.itis.kmpproj26.feature.auth.ui.screen.registration
 
-import com.itis.kmpproj26.feature.auth.ui.screen.login.LoginErrorDialog
 import com.itis.kmpproj26.feature.auth.ui.validator.EmailError
 import com.itis.kmpproj26.feature.auth.ui.validator.PasswordError
 
@@ -15,7 +14,7 @@ data class RegistrationState(
     val emailError: EmailError? = null,
     val passwordError: PasswordError? = null,
     val registrationError: RegistrationError? = null,
-    val errorDialog: RegistrationErrorDialog? = null,
+    val dialog: RegistrationDialog? = null,
 )
 
 enum class NameError {
@@ -26,6 +25,6 @@ enum class RegistrationError {
     USED_EMAIL
 }
 
-enum class RegistrationErrorDialog {
-    UNKNOWN
+enum class RegistrationDialog {
+    ERROR_UNKNOWN
 }

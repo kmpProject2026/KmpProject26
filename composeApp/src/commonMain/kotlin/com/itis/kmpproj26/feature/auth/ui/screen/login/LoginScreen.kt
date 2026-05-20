@@ -41,8 +41,8 @@ fun LoginScreen(
         onRegisterClick = { viewModel.obtainEvent(LoginEvent.OnRegisterClick) },
     )
 
-    when (state.errorDialog) {
-        LoginErrorDialog.UNKNOWN -> DDialog(
+    when (state.dialog) {
+        LoginDialog.ERROR_UNKNOWN -> DDialog(
             message = stringResource(Res.string.common_failure_unknown),
             onDismiss = {
                 viewModel.obtainEvent(LoginEvent.HideErrorDialog)

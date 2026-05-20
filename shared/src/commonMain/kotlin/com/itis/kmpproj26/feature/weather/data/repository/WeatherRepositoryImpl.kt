@@ -12,7 +12,6 @@ internal class WeatherRepositoryImpl(
 ) : WeatherRepository {
 
     override suspend fun getWeather(city: String): CityWeather {
-        println("aaaa")
         return remoteDataSource.getWeather(query = city).mapToEntity()
     }
 }

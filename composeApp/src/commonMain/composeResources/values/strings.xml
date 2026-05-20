@@ -50,6 +50,16 @@
     <string name="auth_enter_email_label">Enter email</string>
     <string name="auth_enter_password_label">Enter password</string>
     <string name="auth_login">Login</string>
-    <string name="auth_register">Register</string>\
+    <string name="auth_register">Register</string>
+
+    <!--    PROFILE-->
+    <string name="profile_logout">Log out</string>
+    <string name="profile_first_name">First name</string>
+    <string name="profile_last_name">Last name</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_created">You are together with us from %s ❤️</string>
+    <string name="profile_delete_profile">Delete profile</string>
+    <string name="profile_deleted">Profile successfully deleted</string>
+    <string name="profile_delete_profile_warning">Are you sure to delete profile?</string>
 
 </resources>

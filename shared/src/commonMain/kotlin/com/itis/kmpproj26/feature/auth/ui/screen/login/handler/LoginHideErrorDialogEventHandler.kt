@@ -8,6 +8,6 @@ class LoginHideErrorDialogEventHandler :
     BaseEventHandler<LoginEvent.HideErrorDialog, LoginViewModel>() {
 
     override fun LoginViewModel.obtain(event: LoginEvent.HideErrorDialog) {
-        viewState = viewState.copy(errorDialog = null)
+        viewState = viewState.copy(dialog = null)
     }
 }

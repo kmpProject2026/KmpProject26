@@ -5,7 +5,7 @@ import com.itis.kmpproj26.core.util.result.FailureReason
 import com.itis.kmpproj26.core.viewmodel.BaseEventHandler
 import com.itis.kmpproj26.core.util.result.Result
 import com.itis.kmpproj26.feature.auth.domain.usecase.LoginUseCase
-import com.itis.kmpproj26.feature.auth.ui.screen.login.LoginErrorDialog
+import com.itis.kmpproj26.feature.auth.ui.screen.login.LoginDialog
 import com.itis.kmpproj26.feature.auth.ui.screen.login.LoginAction
 import com.itis.kmpproj26.feature.auth.ui.screen.login.LoginError
 import com.itis.kmpproj26.feature.auth.ui.screen.login.LoginEvent
@@ -56,7 +56,7 @@ class LoginOnLoginClickEventHandler(
             else -> {
                 viewState.copy(
                     isLoading = false,
-                    errorDialog = LoginErrorDialog.UNKNOWN,
+                    dialog = LoginDialog.ERROR_UNKNOWN,
                 )
             }
         }

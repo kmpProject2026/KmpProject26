@@ -9,7 +9,6 @@ internal class GetWeatherUseCaseImpl(
 ) : GetWeatherUseCase {
 
     override suspend fun invoke(city: String): CityWeather {
-        println("aaaa")
         return weatherRepository.getWeather(city)
     }
 }

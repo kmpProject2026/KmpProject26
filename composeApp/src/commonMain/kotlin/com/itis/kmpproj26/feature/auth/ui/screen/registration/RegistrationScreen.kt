@@ -43,8 +43,8 @@ fun RegistrationScreen(
         onRegisterClick = { viewModel.obtainEvent(RegistrationEvent.OnRegisterClick) },
     )
 
-    when (state.errorDialog) {
-        RegistrationErrorDialog.UNKNOWN -> DDialog(
+    when (state.dialog) {
+        RegistrationDialog.ERROR_UNKNOWN -> DDialog(
             message = stringResource(Res.string.common_failure_unknown),
             onDismiss = {
                 viewModel.obtainEvent(RegistrationEvent.HideErrorDialog)

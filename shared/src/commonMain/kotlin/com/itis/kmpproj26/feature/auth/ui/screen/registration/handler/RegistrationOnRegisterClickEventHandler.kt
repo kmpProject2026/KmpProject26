@@ -10,7 +10,7 @@ import com.itis.kmpproj26.feature.auth.ui.validator.EmailValidator
 import com.itis.kmpproj26.feature.auth.ui.validator.PasswordValidator
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationAction
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationError
-import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationErrorDialog
+import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationDialog
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationEvent
 import com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewModel
 import kotlinx.coroutines.launch
@@ -75,7 +75,7 @@ class RegistrationOnRegisterClickEventHandler (
             else -> {
                 viewState.copy(
                     isLoading = false,
-                    errorDialog = RegistrationErrorDialog.UNKNOWN,
+                    dialog = RegistrationDialog.ERROR_UNKNOWN,
                 )
             }
         }

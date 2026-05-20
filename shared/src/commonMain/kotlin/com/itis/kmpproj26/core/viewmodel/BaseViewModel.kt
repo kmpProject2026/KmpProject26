@@ -14,7 +14,7 @@ abstract class BaseViewModel<State : Any, Action, Event>(
 
     private val _viewState = MutableStateFlow(initState)
     private val _viewAction = MutableSharedFlow<Action>(
-        replay = 0,
+        replay = 1,
         extraBufferCapacity = 1,
     )
 
