@@ -13,7 +13,10 @@ import io.ktor.client.plugins.logging.SIMPLE
 import io.ktor.http.URLProtocol
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
+
+const val YANDEX_DICTIONARY_HTTP_CLIENT = "YandexDictionaryHttpClient"
 
 val networkModule = module {
     single {
@@ -28,6 +31,12 @@ val networkModule = module {
 
     single {
         buildHttpClient(
+            engine = get<HttpEngineFactory>().createEngine(get()),
+            json = get(),
+        )
+    }
+    single<HttpClient>(named(YANDEX_DICTIONARY_HTTP_CLIENT)) {
+        buildExternalHttpClient(
             engine = get<HttpEngineFactory>().createEngine(get()),
             json = get(),
         )
@@ -58,5 +67,23 @@ private fun buildHttpClient(
             this.host = BASE_URL
             this.protocol = URLProtocol.HTTPS
         }
+    }
+}
+
+private fun buildExternalHttpClient(
+    engine: HttpClientEngineFactory<HttpClientEngineConfig>,
+    json: Json,
+) = HttpClient(engine) {
+    install(Logging) {
+        logger = Logger.SIMPLE
+        level = LogLevel.BODY
+    }
+    install(ContentNegotiation) {
+        json(json)
+    }
+    install(HttpTimeout) {
+        connectTimeoutMillis = 5000
+        requestTimeoutMillis = 10000
+        socketTimeoutMillis = 10000
     }
 }

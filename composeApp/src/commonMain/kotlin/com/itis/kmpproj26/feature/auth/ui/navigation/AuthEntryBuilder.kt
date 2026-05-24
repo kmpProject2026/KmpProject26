@@ -18,7 +18,7 @@ fun EntryProviderScope<NavKey>.authEntryBuilder(
                 navigator.navigateClearingStack(AuthRoute.Login)
             },
             navigateToProfile = {
-                navigator.navigateClearingStack(Route.Profile)
+                navigator.navigateClearingStack(Route.WordsCards)
             }
         )
     }
@@ -29,7 +29,7 @@ fun EntryProviderScope<NavKey>.authEntryBuilder(
                 navigator.navigateClearingStack(AuthRoute.Registration)
             },
             navigateToProfile = {
-                navigator.navigateClearingStack(Route.Profile)
+                navigator.navigateClearingStack(Route.WordsCards)
             }
         )
     }
@@ -40,7 +40,7 @@ fun EntryProviderScope<NavKey>.authEntryBuilder(
                 navigator.navigateClearingStack(AuthRoute.Login)
             },
             navigateToProfile = {
-                navigator.navigateClearingStack(Route.Profile)
+                navigator.navigateClearingStack(Route.WordsCards)
             }
         )
     }

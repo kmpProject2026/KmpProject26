@@ -4,6 +4,7 @@
     <!--    NAVIGATION-->
     <string name="navigation_favourites_tab_title">Favourites</string>
     <string name="navigation_profile_tab_title">Profile</string>
+    <string name="navigation_words_tab_title">Words</string>
 
     <!--    COMMON-->
     <string name="common_edit">Edit</string>
@@ -61,5 +62,25 @@
     <string name="profile_delete_profile">Delete profile</string>
     <string name="profile_deleted">Profile successfully deleted</string>
     <string name="profile_delete_profile_warning">Are you sure to delete profile?</string>
+
+    <!--    WORDS-->
+    <string name="words_cards_title">Cards</string>
+    <string name="words_list_title">All words</string>
+    <string name="words_add_title">Add word</string>
+    <string name="words_empty_title">No words yet</string>
+    <string name="words_spelling">Word</string>
+    <string name="words_translation">Translation</string>
+    <string name="words_language_pair">Language pair</string>
+    <string name="words_language_filter">Language filter</string>
+    <string name="words_source_language">Source language</string>
+    <string name="words_target_language">Target language</string>
+    <string name="words_yandex_powered">Powered by Yandex.Dictionary</string>
+    <string name="words_enter_word_label">Enter word</string>
+    <string name="words_enter_translation_label">Enter translation</string>
+    <string name="words_error_empty_word">Word should not be empty</string>
+    <string name="words_error_empty_translation">Translation should not be empty</string>
+    <string name="words_translate">Translate automatically</string>
+    <string name="words_repeat">Repeat</string>
+    <string name="words_remember">Remember</string>
 
 </resources>
