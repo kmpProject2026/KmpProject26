@@ -11,7 +11,7 @@ import com.itis.kmpproj26.common.ui.theme.Providers
 fun DIconButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    size: Dp = Providers.componentSize.buttonMedium,
+    size: Dp = Providers.componentSize.iconButtonMedium,
     enabled: Boolean = true,
     content: @Composable () -> Unit
 ) {
