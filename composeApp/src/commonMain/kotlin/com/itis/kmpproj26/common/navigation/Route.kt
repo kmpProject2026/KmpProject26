@@ -9,5 +9,8 @@ sealed class Route : NavKey {
     data object Auth : Route()
 
     @Serializable
+    data object WordsCards : Route()
+
+    @Serializable
     data object Profile : Route()
 }

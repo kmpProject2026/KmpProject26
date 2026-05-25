@@ -1,0 +1,38 @@
+CREATE TABLE Words (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    spelling TEXT NOT NULL,
+    translation TEXT NOT NULL,
+    source_language TEXT NOT NULL,
+    target_language TEXT NOT NULL,
+    created_at INTEGER NOT NULL
+);
+
+CREATE UNIQUE INDEX words_spelling_language_pair_index
+ON Words(spelling, source_language, target_language);
+
+getAllWords:
+SELECT * FROM Words
+ORDER BY created_at DESC;
+
+getWordBySpellingAndLanguage:
+SELECT * FROM Words
+WHERE spelling = ?
+AND source_language = ?
+AND target_language = ?;
+
+insertWord:
+INSERT OR REPLACE INTO Words(
+    spelling,
+    translation,
+    source_language,
+    target_language,
+    created_at
+)
+VALUES (?, ?, ?, ?, ?);
+
+deleteWordById:
+DELETE FROM Words
+WHERE id = ?;
+
+clearWords:
+DELETE FROM Words;
