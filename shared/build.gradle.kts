@@ -1,9 +1,41 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
+
+val localProperties = Properties().apply {
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localPropertiesFile.inputStream().use(::load)
+    }
+}
+
+val yandexDictionaryApiKey = localProperties
+    .getProperty("YANDEX_DICTIONARY_API_KEY")
+    .orEmpty()
+    .trim()
+    .let(::removePropertyValueQuotes)
+
+fun removePropertyValueQuotes(value: String): String {
+    val trimmedValue = value.trim()
+    if (trimmedValue.length < 2) return trimmedValue
+
+    val firstChar = trimmedValue.first()
+    val lastChar = trimmedValue.last()
+    val hasMatchingQuotes = (firstChar == '"' && lastChar == '"') ||
+            (firstChar == '\'' && lastChar == '\'')
+
+    return if (hasMatchingQuotes) {
+        trimmedValue.substring(1, trimmedValue.lastIndex).trim()
+    } else {
+        trimmedValue
+    }
+}
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.buildKonfig)
     alias(libs.plugins.sqldelight)
 }
 
@@ -86,6 +118,18 @@ sqldelight {
         create("Database") {
             packageName.set("com.itis.kmpproj26")
         }
+    }
+}
+
+buildkonfig {
+    packageName = "com.itis.kmpproj26"
+
+    defaultConfigs {
+        buildConfigField(
+            STRING,
+            "YANDEX_DICTIONARY_API_KEY",
+            yandexDictionaryApiKey,
+        )
     }
 }
 

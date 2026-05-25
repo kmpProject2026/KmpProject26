@@ -13,6 +13,8 @@ class Navigator(val state: NavigationState) {
     }
 
     fun navigateBack() {
-        state.stacksInUse.removeLastOrNull()
+        if (state.stacksInUse.size > 1) {
+            state.stacksInUse.removeLastOrNull()
+        }
     }
 }
