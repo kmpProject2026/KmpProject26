@@ -12,6 +12,9 @@ data class ComponentSize(
     val buttonSmall: Dp = 40.dp,
     val buttonMedium: Dp = 48.dp,
     val buttonLarge: Dp = 56.dp,
+    val iconButtonSmall: Dp = 20.dp,
+    val iconButtonMedium: Dp = 24.dp,
+    val iconButtonLarge: Dp = 32.dp,
     val textFieldMedium: Dp = 60.dp,
 )
 
