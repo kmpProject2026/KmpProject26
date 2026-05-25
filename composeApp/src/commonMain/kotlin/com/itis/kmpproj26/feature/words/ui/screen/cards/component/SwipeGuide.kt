@@ -31,7 +31,6 @@ fun SwipeGuide(
         SwipeGuideItem(
             action = CardSwipeAction.Repeat,
             activeAction = activeAction,
-            marker = "←",
             title = stringResource(Res.string.words_repeat),
             modifier = Modifier.weight(1f),
         )
@@ -39,7 +38,6 @@ fun SwipeGuide(
         SwipeGuideItem(
             action = CardSwipeAction.Remember,
             activeAction = activeAction,
-            marker = "→",
             title = stringResource(Res.string.words_remember),
             modifier = Modifier.weight(1f),
         )

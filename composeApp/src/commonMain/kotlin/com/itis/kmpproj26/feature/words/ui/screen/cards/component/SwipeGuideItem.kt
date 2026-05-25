@@ -17,7 +17,6 @@ import com.itis.kmpproj26.feature.words.ui.screen.cards.util.CardSwipeAction
 fun SwipeGuideItem(
     action: CardSwipeAction,
     activeAction: CardSwipeAction?,
-    marker: String,
     title: String,
     modifier: Modifier = Modifier,
 ) {
@@ -46,16 +45,7 @@ fun SwipeGuideItem(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        DText(
-            text = marker,
-            style = Providers.typography.bodyM,
-            color = contentColor,
-            maxLines = 1,
-        )
-
-        Spacer(modifier = Modifier.width(Providers.spacing.xs))
-
-        DText(
+         DText(
             text = title,
             style = Providers.typography.bodyM,
             color = contentColor,

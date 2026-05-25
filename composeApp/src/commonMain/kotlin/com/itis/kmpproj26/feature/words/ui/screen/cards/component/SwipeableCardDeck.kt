@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -47,7 +48,7 @@ fun SwipeableCardDeck(
     val density = LocalDensity.current
     val swipeThresholdPx = with(density) { 92.dp.toPx() }
     val highlightThresholdPx = with(density) { 36.dp.toPx() }
-    var dragX by remember { mutableStateOf(0f) }
+    var dragX by remember { mutableFloatStateOf(0f) }
     var dragY by remember { mutableStateOf(0f) }
     var isShowingTranslation by remember { mutableStateOf(false) }
     var isFlyingOut by remember { mutableStateOf(false) }
