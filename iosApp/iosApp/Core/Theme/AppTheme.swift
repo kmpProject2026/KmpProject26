@@ -196,3 +196,45 @@ struct AppInputField: View {
         }
     }
 }
+
+struct AppSecureInputField: View {
+
+    let title: String
+    let placeholder: String
+    @Binding var text: String
+    var isError: Bool = false
+    var errorText: String?
+
+    @Environment(\.appPalette)
+    private var palette
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.system(size: 16))
+                .foregroundStyle(palette.onSurface)
+                .padding(.leading, 12)
+
+            SecureField(placeholder, text: $text)
+                .font(.system(size: 16))
+                .foregroundStyle(palette.onSurface)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 12)
+                .background(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .fill(palette.surface)
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .stroke(isError ? palette.error : palette.outline, lineWidth: 1)
+                )
+
+            if let errorText {
+                Text(errorText)
+                    .font(.system(size: 14))
+                    .foregroundStyle(palette.error)
+                    .padding(.leading, 12)
+            }
+        }
+    }
+}
