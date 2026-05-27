@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:AddWordViewModel.kt:AddWordViewModel$override fun obtainEvent</ID>
+    <ID>CyclomaticComplexMethod:RegistrationViewModel.kt:RegistrationViewModel$override fun obtainEvent</ID>
+    <ID>CyclomaticComplexMethod:WordsCardsViewModel.kt:WordsCardsViewModel$override fun obtainEvent</ID>
+    <ID>CyclomaticComplexMethod:WordsListViewModel.kt:WordsListViewModel$override fun obtainEvent</ID>
+    <ID>EmptyClassBlock:BookRepository.kt:BookRepository${ }</ID>
+    <ID>EmptyClassBlock:BookRepositoryImpl.kt:BookRepositoryImpl${ }</ID>
+    <ID>EmptyClassBlock:GetBooksUseCase.kt:GetBooksUseCase${ }</ID>
+    <ID>EmptyDefaultConstructor:RegistrationEmailChangedEventHandler.kt:RegistrationEmailChangedEventHandler</ID>
+    <ID>EmptyFunctionBlock:WeatherViewModel.kt:WeatherViewModel${ }</ID>
+    <ID>MagicNumber:NetworkModule.kt:10000</ID>
+    <ID>MagicNumber:NetworkModule.kt:5000</ID>
+    <ID>MagicNumber:YandexDictionaryLookupResponse.kt:200</ID>
+    <ID>MagicNumber:YandexDictionaryLookupResponse.kt:3</ID>
+    <ID>MatchingDeclarationName:LoginViewModel.kt:ProfileViewModel : BaseViewModelKoinComponent</ID>
+    <ID>MatchingDeclarationName:Platform.android.kt:AndroidPlatform : Platform</ID>
+    <ID>MatchingDeclarationName:Platform.ios.kt:IOSPlatform : Platform</ID>
+    <ID>MatchingDeclarationName:Platform.jvm.kt:JVMPlatform : Platform</ID>
+    <ID>NewLineAtEndOfFile:AuthModule.kt:com.itis.kmpproj26.feature.auth.di.AuthModule.kt</ID>
+    <ID>NewLineAtEndOfFile:AuthRepository.kt:com.itis.kmpproj26.feature.auth.domain.repository.AuthRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:BookParams.kt:com.itis.kmpproj26.feature.old.api.BookParams.kt</ID>
+    <ID>NewLineAtEndOfFile:BookRepository.kt:com.itis.kmpproj26.feature.old.api.BookRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:BookRepositoryImpl.kt:com.itis.kmpproj26.feature.old.impl.BookRepositoryImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:DatabaseBookDataSource.kt:com.itis.kmpproj26.feature.old.DatabaseBookDataSource.kt</ID>
+    <ID>NewLineAtEndOfFile:DateHelper.kt:com.itis.kmpproj26.core.util.date.DateHelper.kt</ID>
+    <ID>NewLineAtEndOfFile:Flow.kt:com.itis.kmpproj26.core.coroutines.Flow.kt</ID>
+    <ID>NewLineAtEndOfFile:GetBooksUseCase.kt:com.itis.kmpproj26.feature.old.api.GetBooksUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GetWeatherUseCaseImpl.kt:com.itis.kmpproj26.feature.weather.data.usecase.GetWeatherUseCaseImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:Greeting.kt:com.itis.kmpproj26.Greeting.kt</ID>
+    <ID>NewLineAtEndOfFile:HttpEngineFactory.android.kt:com.itis.kmpproj26.core.netwrok.HttpEngineFactory.android.kt</ID>
+    <ID>NewLineAtEndOfFile:HttpEngineFactory.ios.kt:com.itis.kmpproj26.core.netwrok.HttpEngineFactory.ios.kt</ID>
+    <ID>NewLineAtEndOfFile:HttpEngineFactory.jvm.kt:com.itis.kmpproj26.core.netwrok.HttpEngineFactory.jvm.kt</ID>
+    <ID>NewLineAtEndOfFile:HttpEngineFactory.kt:com.itis.kmpproj26.core.netwrok.HttpEngineFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginViewModel.kt:com.itis.kmpproj26.feature.auth.ui.screen.login.LoginViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginViewModel.kt:com.itis.kmpproj26.feature.profile.ui.screen.LoginViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:PersistentAuthDataSource.kt:com.itis.kmpproj26.feature.auth.data.datasource.PersistentAuthDataSource.kt</ID>
+    <ID>NewLineAtEndOfFile:PersistentWeatherDataSource.kt:com.itis.kmpproj26.feature.weather.data.datasource.PersistentWeatherDataSource.kt</ID>
+    <ID>NewLineAtEndOfFile:Platform.android.kt:com.itis.kmpproj26.Platform.android.kt</ID>
+    <ID>NewLineAtEndOfFile:Platform.ios.kt:com.itis.kmpproj26.Platform.ios.kt</ID>
+    <ID>NewLineAtEndOfFile:Platform.jvm.kt:com.itis.kmpproj26.Platform.jvm.kt</ID>
+    <ID>NewLineAtEndOfFile:Platform.kt:com.itis.kmpproj26.Platform.kt</ID>
+    <ID>NewLineAtEndOfFile:ProfileState.kt:com.itis.kmpproj26.feature.profile.ui.screen.ProfileState.kt</ID>
+    <ID>NewLineAtEndOfFile:ProfileViewModel.kt:com.itis.kmpproj26.feature.profile.ui.screen.ProfileViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:RegistrationViewModel.kt:com.itis.kmpproj26.feature.auth.ui.screen.registration.RegistrationViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:RemoteDatasource.kt:com.itis.kmpproj26.core.netwrok.RemoteDatasource.kt</ID>
+    <ID>NewLineAtEndOfFile:RemoteWeatherDataSource.kt:com.itis.kmpproj26.feature.weather.data.datasource.RemoteWeatherDataSource.kt</ID>
+    <ID>NewLineAtEndOfFile:SharedCommonTest.kt:com.itis.kmpproj26.SharedCommonTest.kt</ID>
+    <ID>NewLineAtEndOfFile:SplashAction.kt:com.itis.kmpproj26.feature.auth.ui.screen.splash.SplashAction.kt</ID>
+    <ID>NewLineAtEndOfFile:SplashViewModel.kt:com.itis.kmpproj26.feature.auth.ui.screen.splash.SplashViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:SplashViewState.kt:com.itis.kmpproj26.feature.auth.ui.screen.splash.SplashViewState.kt</ID>
+    <ID>NewLineAtEndOfFile:WeatherAction.kt:com.itis.kmpproj26.feature.weather.ui.WeatherAction.kt</ID>
+    <ID>NewLineAtEndOfFile:WeatherModule.kt:com.itis.kmpproj26.feature.weather.data.WeatherModule.kt</ID>
+    <ID>NewLineAtEndOfFile:WeatherRepository.kt:com.itis.kmpproj26.feature.weather.domain.repository.WeatherRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:WeatherResponse.kt:com.itis.kmpproj26.feature.weather.data.datasource.remote.WeatherResponse.kt</ID>
+    <ID>NewLineAtEndOfFile:WeatherViewModel.kt:com.itis.kmpproj26.feature.weather.ui.WeatherViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:WeatherViewState.kt:com.itis.kmpproj26.feature.weather.ui.WeatherViewState.kt</ID>
+    <ID>NewLineAtEndOfFile:dbModule.kt:com.itis.kmpproj26.core.database.dbModule.kt</ID>
+    <ID>NewLineAtEndOfFile:platformModule.android.kt:com.itis.kmpproj26.core.di.platformModule.android.kt</ID>
+    <ID>NewLineAtEndOfFile:platformModule.jvm.kt:com.itis.kmpproj26.core.di.platformModule.jvm.kt</ID>
+    <ID>NewLineAtEndOfFile:platformModule.kt:com.itis.kmpproj26.core.di.platformModule.kt</ID>
+    <ID>SwallowedException:WeatherViewModel.kt:WeatherViewModel$ex: Throwable</ID>
+    <ID>TooGenericExceptionCaught:AuthRepositoryImpl.kt:AuthRepositoryImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WeatherViewModel.kt:WeatherViewModel$ex: Throwable</ID>
+    <ID>TooGenericExceptionCaught:WordsRepositoryImpl.kt:WordsRepositoryImpl$ex: Exception</ID>
+    <ID>UnusedParameter:WeatherViewModel.kt:WeatherViewModel$text: String</ID>
+    <ID>UtilityClassWithPublicConstructor:ApiKeyPlugin.kt:ApiKeyPlugin</ID>
+    <ID>WildcardImport:DateHelper.kt:import kotlinx.datetime.*</ID>
+    <ID>WildcardImport:Flow.kt:import kotlinx.coroutines.flow.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

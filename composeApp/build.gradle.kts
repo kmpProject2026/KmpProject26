@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
     alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.detekt)
 }
 
 kotlin {
@@ -89,6 +90,21 @@ android {
 
 dependencies {
     debugImplementation(libs.compose.uiTooling)
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
+    source.setFrom(
+        files(
+            "src/androidMain/kotlin",
+            "src/commonMain/kotlin",
+            "src/commonTest/kotlin",
+            "src/jvmMain/kotlin",
+            "src/jvmTest/kotlin",
+        )
+    )
+    config.setFrom(rootProject.files("config/detekt/detekt.yml"))
 }
 
 compose.desktop {

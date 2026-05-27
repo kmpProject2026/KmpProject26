@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:SwipeableCardDeck.kt:@Composable fun SwipeableCardDeck</ID>
+    <ID>FunctionNaming:AddWordContent.kt:@Composable fun AddWordContent</ID>
+    <ID>FunctionNaming:AddWordScreen.kt:@Composable fun AddWordScreen</ID>
+    <ID>FunctionNaming:App.kt:@Composable @Preview fun App</ID>
+    <ID>FunctionNaming:BottomNavigation.kt:@Composable fun BottomNavigation</ID>
+    <ID>FunctionNaming:DActionButton.kt:@Composable fun DFloatingActionButton</ID>
+    <ID>FunctionNaming:DButton.kt:@Composable fun DButton</ID>
+    <ID>FunctionNaming:DDialog.kt:@Composable fun DDialog</ID>
+    <ID>FunctionNaming:DIcon.kt:@Composable fun DIcon</ID>
+    <ID>FunctionNaming:DIconButton.kt:@Composable fun DIconButton</ID>
+    <ID>FunctionNaming:DOutlinedInputSection.kt:@Composable fun DOutlinedInputSection</ID>
+    <ID>FunctionNaming:DText.kt:@Composable fun DText</ID>
+    <ID>FunctionNaming:DTextField.kt:@Composable fun DTextField</ID>
+    <ID>FunctionNaming:DTheme.kt:@Composable fun DTheme</ID>
+    <ID>FunctionNaming:EmptyWords.kt:@Composable fun EmptyWords</ID>
+    <ID>FunctionNaming:FlashCard.kt:@Composable fun FlashCard</ID>
+    <ID>FunctionNaming:FlashCardFace.kt:@Composable fun FlashCardFace</ID>
+    <ID>FunctionNaming:LanguageDropdown.kt:@Composable fun LanguageDirectionPicker</ID>
+    <ID>FunctionNaming:LanguageDropdown.kt:@Composable private fun LanguageDropdown</ID>
+    <ID>FunctionNaming:LoginContent.kt:@Composable fun LoginContent</ID>
+    <ID>FunctionNaming:LoginScreen.kt:@Composable fun LoginScreen</ID>
+    <ID>FunctionNaming:MainActivity.kt:@Preview @Composable fun AppAndroidPreview</ID>
+    <ID>FunctionNaming:NavHost.kt:@OptIn(ExperimentalMaterial3Api::class, ExperimentalAnimationApi::class) @Composable fun NavHost</ID>
+    <ID>FunctionNaming:ProfileContent.kt:@Composable fun ProfileContent</ID>
+    <ID>FunctionNaming:ProfileImageCard.kt:@Composable fun ProfileImageCard</ID>
+    <ID>FunctionNaming:ProfileInfo.kt:@Composable fun ProfileInfo</ID>
+    <ID>FunctionNaming:ProfileInfo.kt:@Composable private fun ProfileInfo</ID>
+    <ID>FunctionNaming:ProfileScreen.kt:@Composable fun ProfileScreen</ID>
+    <ID>FunctionNaming:ProfileSectionCard.kt:@Composable fun ProfileSectionCard</ID>
+    <ID>FunctionNaming:ProfileShimmer.kt:@Composable fun ProfileShimmer</ID>
+    <ID>FunctionNaming:ProfileShimmer.kt:@Composable private fun ProfileSectionCardShimmer</ID>
+    <ID>FunctionNaming:RegistrationContent.kt:@Composable fun RegistrationContent</ID>
+    <ID>FunctionNaming:RegistrationScreen.kt:@Composable fun RegistrationScreen</ID>
+    <ID>FunctionNaming:SplashScreen.kt:@Composable fun SplashScreen</ID>
+    <ID>FunctionNaming:SwipeGuide.kt:@Composable fun SwipeGuide</ID>
+    <ID>FunctionNaming:SwipeGuideItem.kt:@Composable fun SwipeGuideItem</ID>
+    <ID>FunctionNaming:SwipeableCardDeck.kt:@Composable fun SwipeableCardDeck</ID>
+    <ID>FunctionNaming:WeatherScreen.kt:@Composable fun WeatherScreen</ID>
+    <ID>FunctionNaming:WeatherScreen.kt:@Composable private fun FooterButton</ID>
+    <ID>FunctionNaming:WeatherScreen.kt:@Composable private fun WeatherView</ID>
+    <ID>FunctionNaming:WeatherScreen.kt:@Preview @Composable private fun WeatherView_Preview</ID>
+    <ID>FunctionNaming:WeatherScreen.kt:@Preview @Composable private fun WeatherView_Preview_Error</ID>
+    <ID>FunctionNaming:WordListItem.kt:@Composable fun WordListItem</ID>
+    <ID>FunctionNaming:WordsCardsContent.kt:@Composable fun WordsCardsContent</ID>
+    <ID>FunctionNaming:WordsCardsScreen.kt:@Composable fun WordsCardsScreen</ID>
+    <ID>FunctionNaming:WordsListContent.kt:@Composable fun WordsListContent</ID>
+    <ID>FunctionNaming:WordsListScreen.kt:@Composable fun WordsListScreen</ID>
+    <ID>InvalidPackageDeclaration:DIcon.kt:package ru.fav.yogadaily.ui.component</ID>
+    <ID>LongMethod:AddWordContent.kt:@Composable fun AddWordContent</ID>
+    <ID>LongMethod:DDialog.kt:@Composable fun DDialog</ID>
+    <ID>LongMethod:LoginContent.kt:@Composable fun LoginContent</ID>
+    <ID>LongMethod:ProfileShimmer.kt:@Composable fun ProfileShimmer</ID>
+    <ID>LongMethod:RegistrationContent.kt:@Composable fun RegistrationContent</ID>
+    <ID>LongMethod:SwipeableCardDeck.kt:@Composable fun SwipeableCardDeck</ID>
+    <ID>LongMethod:WordsCardsContent.kt:@Composable fun WordsCardsContent</ID>
+    <ID>LongMethod:WordsListContent.kt:@Composable fun WordsListContent</ID>
+    <ID>MagicNumber:FlashCard.kt:12f</ID>
+    <ID>MagicNumber:FlashCard.kt:180f</ID>
+    <ID>MagicNumber:LoginContent.kt:1.4f</ID>
+    <ID>MagicNumber:ProfileImageCard.kt:1.4f</ID>
+    <ID>MagicNumber:ProfileShimmer.kt:0.3f</ID>
+    <ID>MagicNumber:ProfileShimmer.kt:0.4f</ID>
+    <ID>MagicNumber:ProfileShimmer.kt:3</ID>
+    <ID>MagicNumber:RegistrationContent.kt:1.4f</ID>
+    <ID>MagicNumber:SwipeableCardDeck.kt:32f</ID>
+    <ID>MagicNumber:visibleCardStack.kt:3</ID>
+    <ID>NewLineAtEndOfFile:AddWordContent.kt:com.itis.kmpproj26.feature.words.ui.screen.add.component.AddWordContent.kt</ID>
+    <ID>NewLineAtEndOfFile:App.kt:com.itis.kmpproj26.App.kt</ID>
+    <ID>NewLineAtEndOfFile:AppDelegate.kt:com.itis.kmpproj26.AppDelegate.kt</ID>
+    <ID>NewLineAtEndOfFile:CardSwipeAction.kt:com.itis.kmpproj26.feature.words.ui.screen.cards.util.CardSwipeAction.kt</ID>
+    <ID>NewLineAtEndOfFile:ComposeAppCommonTest.kt:com.itis.kmpproj26.ComposeAppCommonTest.kt</ID>
+    <ID>NewLineAtEndOfFile:FlashCardFace.kt:com.itis.kmpproj26.feature.words.ui.screen.cards.component.FlashCardFace.kt</ID>
+    <ID>NewLineAtEndOfFile:MainActivity.kt:com.itis.kmpproj26.MainActivity.kt</ID>
+    <ID>NewLineAtEndOfFile:Test.kt:com.itis.kmpproj26.feature.Test.kt</ID>
+    <ID>NewLineAtEndOfFile:WordListItem.kt:com.itis.kmpproj26.feature.words.ui.screen.list.component.WordListItem.kt</ID>
+    <ID>NewLineAtEndOfFile:WordsCardsContent.kt:com.itis.kmpproj26.feature.words.ui.screen.cards.component.WordsCardsContent.kt</ID>
+    <ID>NewLineAtEndOfFile:main.kt:com.itis.kmpproj26.main.kt</ID>
+    <ID>NewLineAtEndOfFile:navigationModule.kt:com.itis.kmpproj26.common.navigation.navigationModule.kt</ID>
+    <ID>WildcardImport:App.kt:import androidx.compose.runtime.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

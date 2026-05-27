@@ -36,6 +36,7 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.buildKonfig)
+    alias(libs.plugins.detekt)
     alias(libs.plugins.sqldelight)
 }
 
@@ -131,6 +132,22 @@ buildkonfig {
             yandexDictionaryApiKey,
         )
     }
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
+    source.setFrom(
+        files(
+            "src/androidMain/kotlin",
+            "src/commonMain/kotlin",
+            "src/commonTest/kotlin",
+            "src/iosMain/kotlin",
+            "src/jvmMain/kotlin",
+            "src/jvmTest/kotlin",
+        )
+    )
+    config.setFrom(rootProject.files("config/detekt/detekt.yml"))
 }
 
 
