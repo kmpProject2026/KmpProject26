@@ -39,11 +39,6 @@
     <ID>FunctionNaming:SwipeGuide.kt:@Composable fun SwipeGuide</ID>
     <ID>FunctionNaming:SwipeGuideItem.kt:@Composable fun SwipeGuideItem</ID>
     <ID>FunctionNaming:SwipeableCardDeck.kt:@Composable fun SwipeableCardDeck</ID>
-    <ID>FunctionNaming:WeatherScreen.kt:@Composable fun WeatherScreen</ID>
-    <ID>FunctionNaming:WeatherScreen.kt:@Composable private fun FooterButton</ID>
-    <ID>FunctionNaming:WeatherScreen.kt:@Composable private fun WeatherView</ID>
-    <ID>FunctionNaming:WeatherScreen.kt:@Preview @Composable private fun WeatherView_Preview</ID>
-    <ID>FunctionNaming:WeatherScreen.kt:@Preview @Composable private fun WeatherView_Preview_Error</ID>
     <ID>FunctionNaming:WordListItem.kt:@Composable fun WordListItem</ID>
     <ID>FunctionNaming:WordsCardsContent.kt:@Composable fun WordsCardsContent</ID>
     <ID>FunctionNaming:WordsCardsScreen.kt:@Composable fun WordsCardsScreen</ID>
@@ -80,6 +75,5 @@
     <ID>NewLineAtEndOfFile:WordsCardsContent.kt:com.itis.kmpproj26.feature.words.ui.screen.cards.component.WordsCardsContent.kt</ID>
     <ID>NewLineAtEndOfFile:main.kt:com.itis.kmpproj26.main.kt</ID>
     <ID>NewLineAtEndOfFile:navigationModule.kt:com.itis.kmpproj26.common.navigation.navigationModule.kt</ID>
-    <ID>WildcardImport:App.kt:import androidx.compose.runtime.*</ID>
   </CurrentIssues>
 </SmellBaseline>

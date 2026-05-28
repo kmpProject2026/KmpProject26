@@ -3,6 +3,7 @@ package com.itis.kmpproj26.feature.words.ui.screen.add
 import com.itis.kmpproj26.core.viewmodel.BaseViewModel
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordBackEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordHideErrorDialogEventHandler
+import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordInitEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordSaveEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordSourceLanguageChangedEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordSpellingChangedEventHandler
@@ -19,6 +20,7 @@ class AddWordViewModel : BaseViewModel<State, Action, Event>(
     initState = State()
 ), KoinComponent {
 
+    private val initEventHandler: AddWordInitEventHandler by inject()
     private val spellingChangedEventHandler: AddWordSpellingChangedEventHandler by inject()
     private val translationChangedEventHandler: AddWordTranslationChangedEventHandler by inject()
     private val sourceLanguageChangedEventHandler: AddWordSourceLanguageChangedEventHandler by inject()
@@ -31,6 +33,7 @@ class AddWordViewModel : BaseViewModel<State, Action, Event>(
     override fun obtainEvent(event: Event) {
         when (event) {
             is Event.HideErrorDialog -> with(hideErrorDialogEventHandler) { obtain(event) }
+            is Event.Init -> with(initEventHandler) { obtain(event) }
             is Event.OnBackClick -> with(backEventHandler) { obtain(event) }
             is Event.OnSaveClick -> with(saveEventHandler) { obtain(event) }
             is Event.OnSpellingChanged -> with(spellingChangedEventHandler) { obtain(event) }

@@ -6,6 +6,7 @@ struct iOSApp: App {
 
 
     init() {
+        AppAnalytics.configure()
         initShared()
     }
 

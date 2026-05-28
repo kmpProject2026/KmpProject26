@@ -1,6 +1,8 @@
 package com.itis.kmpproj26.feature.words.ui.screen.cards.handler
 
 import androidx.lifecycle.viewModelScope
+import com.itis.kmpproj26.core.analytics.AnalyticsEvent
+import com.itis.kmpproj26.core.analytics.AnalyticsService
 import com.itis.kmpproj26.core.util.result.Result
 import com.itis.kmpproj26.core.viewmodel.BaseEventHandler
 import com.itis.kmpproj26.feature.words.domain.model.WordLanguagePair
@@ -12,9 +14,12 @@ import kotlinx.coroutines.launch
 
 class WordsCardsInitEventHandler(
     private val getWordsUseCase: GetWordsUseCase,
+    private val analyticsService: AnalyticsService,
 ) : BaseEventHandler<WordsCardsEvent.Init, WordsCardsViewModel>() {
 
     override fun WordsCardsViewModel.obtain(event: WordsCardsEvent.Init) {
+        analyticsService.logEvent(AnalyticsEvent.LAUNCH_WORDS_CARDS)
+
         viewModelScope.launch {
             viewState = viewState.copy(isLoading = true)
 

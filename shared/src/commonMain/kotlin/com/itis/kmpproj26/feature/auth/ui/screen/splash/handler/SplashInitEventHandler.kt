@@ -1,6 +1,8 @@
 package com.itis.kmpproj26.feature.auth.ui.screen.splash.handler
 
 import androidx.lifecycle.viewModelScope
+import com.itis.kmpproj26.core.analytics.AnalyticsEvent
+import com.itis.kmpproj26.core.analytics.AnalyticsService
 import com.itis.kmpproj26.core.viewmodel.BaseEventHandler
 import com.itis.kmpproj26.core.util.result.Result
 import com.itis.kmpproj26.feature.auth.domain.usecase.IsUserLoggedInUseCase
@@ -11,9 +13,12 @@ import kotlinx.coroutines.launch
 
 class SplashInitEventHandler(
     private val isUserLoggedInUseCase: IsUserLoggedInUseCase,
+    private val analyticsService: AnalyticsService,
 ) : BaseEventHandler<SplashEvent.Init, SplashViewModel>() {
 
     override fun SplashViewModel.obtain(event: SplashEvent.Init) {
+        analyticsService.logEvent(AnalyticsEvent.LAUNCH_SPLASH)
+
         viewModelScope.launch {
             viewState = viewState.copy(isLoading = true)
 

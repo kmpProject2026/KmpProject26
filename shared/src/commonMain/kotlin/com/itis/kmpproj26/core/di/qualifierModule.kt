@@ -8,10 +8,9 @@ internal object QualifierSettingName
 
 internal val qualifierModule = module {
     factory<String>(named<QualifierDBName>()) {
-        "book.db"
+        "dictionary.db"
     }
     factory<String>(named<QualifierSettingName>()) {
         "settings"
     }
 }
-

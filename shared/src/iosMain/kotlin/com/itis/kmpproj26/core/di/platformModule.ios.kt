@@ -3,6 +3,8 @@ package com.itis.kmpproj26.core.di
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.native.NativeSqliteDriver
 import com.itis.kmpproj26.Database
+import com.itis.kmpproj26.core.analytics.AnalyticsService
+import com.itis.kmpproj26.core.analytics.IosAnalyticsService
 import com.russhwolf.settings.NSUserDefaultsSettings
 import com.russhwolf.settings.Settings
 import org.koin.core.module.Module
@@ -20,6 +22,10 @@ actual val platformModule: Module = module {
     single<Settings> {
         NSUserDefaultsSettings.Factory()
             .create(name = get(named<QualifierSettingName>()))
+    }
+
+    single<AnalyticsService> {
+        IosAnalyticsService()
     }
 }
 
