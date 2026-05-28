@@ -9,6 +9,8 @@ plugins {
     alias(libs.plugins.composeHotReload)
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.detekt)
+    alias(libs.plugins.googleService)
+    alias(libs.plugins.crashlytics)
 }
 
 kotlin {

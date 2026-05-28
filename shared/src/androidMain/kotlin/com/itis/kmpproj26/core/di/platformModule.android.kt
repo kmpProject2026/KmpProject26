@@ -4,6 +4,8 @@ import android.content.Context
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.itis.kmpproj26.Database
+import com.itis.kmpproj26.core.analytics.AnalyticsService
+import com.itis.kmpproj26.core.analytics.AndroidFirebaseAnalyticsService
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.SharedPreferencesSettings
 import org.koin.core.module.Module
@@ -26,6 +28,12 @@ actual val platformModule: Module = module {
                     get(named<QualifierSettingName>()),
                     Context.MODE_PRIVATE
                 )
+        )
+    }
+
+    single<AnalyticsService> {
+        AndroidFirebaseAnalyticsService(
+            context = get(),
         )
     }
 }

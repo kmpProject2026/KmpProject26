@@ -1,6 +1,8 @@
 package com.itis.kmpproj26.feature.words.ui.screen.list.handler
 
 import androidx.lifecycle.viewModelScope
+import com.itis.kmpproj26.core.analytics.AnalyticsEvent
+import com.itis.kmpproj26.core.analytics.AnalyticsService
 import com.itis.kmpproj26.core.util.result.Result
 import com.itis.kmpproj26.core.viewmodel.BaseEventHandler
 import com.itis.kmpproj26.feature.words.domain.usecase.GetWordsUseCase
@@ -11,9 +13,12 @@ import kotlinx.coroutines.launch
 
 class WordsListInitEventHandler(
     private val getWordsUseCase: GetWordsUseCase,
+    private val analyticsService: AnalyticsService,
 ) : BaseEventHandler<WordsListEvent.Init, WordsListViewModel>() {
 
     override fun WordsListViewModel.obtain(event: WordsListEvent.Init) {
+        analyticsService.logEvent(AnalyticsEvent.LAUNCH_WORDS_LIST)
+
         viewModelScope.launch {
             viewState = viewState.copy(isLoading = true)
 

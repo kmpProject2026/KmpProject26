@@ -15,6 +15,7 @@ import com.itis.kmpproj26.feature.words.domain.usecase.GetWordsUseCase
 import com.itis.kmpproj26.feature.words.domain.usecase.TranslateWordUseCase
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordBackEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordHideErrorDialogEventHandler
+import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordInitEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordSaveEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordSourceLanguageChangedEventHandler
 import com.itis.kmpproj26.feature.words.ui.screen.add.handler.AddWordSpellingChangedEventHandler
@@ -68,6 +69,7 @@ val wordsModule = module {
     factoryOf(::WordsListTargetLanguageFilterChangedEventHandler)
     factoryOf(::WordsListHideErrorDialogEventHandler)
 
+    factoryOf(::AddWordInitEventHandler)
     factoryOf(::AddWordSpellingChangedEventHandler)
     factoryOf(::AddWordTranslationChangedEventHandler)
     factoryOf(::AddWordSourceLanguageChangedEventHandler)

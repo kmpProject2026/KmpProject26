@@ -20,6 +20,10 @@ fun AddWordScreen(
     val state by viewModel.viewStates.collectAsStateWithLifecycle()
 
     LaunchedEffect(Unit) {
+        viewModel.obtainEvent(AddWordEvent.Init)
+    }
+
+    LaunchedEffect(Unit) {
         viewModel.viewActions.collect { action ->
             when (action) {
                 AddWordAction.NavigateBack -> navigateBack()

@@ -103,6 +103,9 @@ struct AddWordView: View {
         }
         .background(palette.background.ignoresSafeArea())
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            viewModel.obtainEvent(AddWordEvent.Init.shared)
+        }
         .onReceive(viewModel.actions) { action in
             if action is AddWordAction.NavigateBack {
                 navigateBack()

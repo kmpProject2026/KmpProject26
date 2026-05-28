@@ -1,6 +1,8 @@
 package com.itis.kmpproj26.feature.profile.ui.screen.handler
 
 import androidx.lifecycle.viewModelScope
+import com.itis.kmpproj26.core.analytics.AnalyticsEvent
+import com.itis.kmpproj26.core.analytics.AnalyticsService
 import com.itis.kmpproj26.core.util.date.DateHelper
 import com.itis.kmpproj26.core.viewmodel.BaseEventHandler
 import com.itis.kmpproj26.core.util.result.Result
@@ -12,10 +14,11 @@ import kotlinx.coroutines.launch
 
 class ProfileInitEventHandler(
     private val getCurrentUserUseCase: GetCurrentUserUseCase,
+    private val analyticsService: AnalyticsService,
 ) : BaseEventHandler<ProfileEvent.Init, ProfileViewModel>() {
 
     override fun ProfileViewModel.obtain(event: ProfileEvent.Init) {
-        // analyticsService.profileOpen()
+        analyticsService.logEvent(AnalyticsEvent.LAUNCH_PROFILE)
 
         viewModelScope.launch {
             viewState = viewState.copy(isLoading = true)
